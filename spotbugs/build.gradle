@@ -129,6 +129,10 @@ task copyLibsForEclipse (type: Copy) {
     from configurations.compileOnly.files
     into ".libs"
     include "*.jar"
+
+    from configurations.guiCompileOnly.files
+    into ".libs"
+    include "*.jar"
 }
 
 task updateManifest {
